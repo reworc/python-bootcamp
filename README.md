@@ -6,6 +6,15 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
 
 - __code__: source code examples
 - __material__: additional material
+  - Jupyter notebooks
+  - __Quick references:__
+    - [Numbers](material/docs/01_Zahlen.pdf)
+    - [Variables](material/docs/02_Variablen.pdf)
+    - [Strings](material/docs/03_Strings.pdf)
+    - [Lists](material/docs/04_Listen.pdf)
+    - [Operators](material/docs/05_Vergleichsoperatoren.pdf)
+    - [Lists](material/docs/06_Operatoren_Listen.pdf)
+    - [Loops](material/docs/07_Schleifen.pdf)
 - __notes__: notes about programming with python
   - [Prerequisites](notes/00_prerequisites.md)
   - [Basics](notes/01_basics.md)

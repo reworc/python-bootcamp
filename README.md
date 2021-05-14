@@ -19,10 +19,10 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
     - [Strings](material/docs/03_Strings.pdf)
     - [Lists](material/docs/04_Listen.pdf)
     - [Operators](material/docs/05_Vergleichsoperatoren.pdf)
-    - [Lists](material/docs/06_Operatoren_Listen.pdf)
+    - [List Operators](material/docs/06_Operatoren_Listen.pdf)
     - [Loops](material/docs/07_Schleifen.pdf)
     - [Functions](material/docs/08_Funktionen_Methoden.pdf)
-    - [Lists](material/docs/09_Listen.pdf)
+    - [Lists (Advanced)](material/docs/09_Listen.pdf)
     - [Dictionaries](material/docs/10_Dictionary.pdf)
     - [Tuple](material/docs/11_Tupel.pdf)
 - __notes__: notes about programming with python

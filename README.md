@@ -25,6 +25,7 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
     - [Lists (Advanced)](material/docs/09_Listen.pdf)
     - [Dictionaries](material/docs/10_Dictionary.pdf)
     - [Tuple](material/docs/11_Tupel.pdf)
+    - [OOP](material/docs/12_OOP.pdf)
 - __notes__: notes about programming with python
   - [Prerequisites](notes/00_prerequisites.md)
   - [Basics](notes/01_basics.md)

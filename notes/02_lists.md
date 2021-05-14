@@ -1,5 +1,13 @@
 # Python Bootcamp: Lists
 
+<!-- omit in toc -->
+## Table of Contents
+
+1. [Basics](#basics)
+2. [List Comprehensions](#list-comprehensions)
+3. [Tuple](#tuple)
+4. [Dictionaries](#dictionaries)
+
 ## Basics
 
 * define list: `students = [ "Max", "Monika", "Erik", "Franziska" ]`
@@ -12,7 +20,7 @@
 * `pop()` removes last element from the list (and returns the last element itself)
 * `join()` insert strings as separators in lists: `(" & ").join(["Max", "Moritz", "Hexe"])` --> `Max & Moritz & Hexe`
 * `sum()`: sum elements of a list
-* __List-Slicing__: `first_elements = students[0:2]` return the first two elements (start-idx: 0, last-index: 2 (exclusive)) 
+* __List-Slicing__: `first_elements = students[0:2]` return the first two elements (start-idx: 0, last-index: 2 (exclusive))
   * Examples:
 
   ```Python
@@ -37,6 +45,9 @@
 
   ```
 
+**[⬆ back to top](#table-of-contents)**
+___
+
 ## List Comprehensions
 
 * creates a new list with converted values:
@@ -59,6 +70,9 @@
     ys3 = [v * v for v in xs2]              # [0.0, 0.01, .., 98.01]
 
 ```
+
+**[⬆ back to top](#table-of-contents)**
+___
 
 ## Tuple
 
@@ -89,7 +103,8 @@
 
   ```
 
-
+**[⬆ back to top](#table-of-contents)**
+___
 
 ## Dictionaries
 
@@ -112,3 +127,6 @@
         print(key + " : " + value)
 
   ```
+
+**[⬆ back to top](#table-of-contents)**
+___

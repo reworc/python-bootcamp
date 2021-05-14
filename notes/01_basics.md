@@ -1,5 +1,15 @@
 # Python Bootcamp: Basics
 
+<!-- omit in toc -->
+## Table of Contents
+
+1. [Base Data structures and Syntax](#base-data-structures-and-syntax)
+2. [Conversions](#conversions)
+3. [Operators](#operators)
+4. [Control structures](#control-structures)
+5. [Functions](#functions)
+6. [File Handling](#file-handling)
+
 ## Base Data structures and Syntax
 
 * define variable: `a = 2+3`
@@ -9,6 +19,9 @@
   `print("my age is: " + str(22))`
 * `split() `: split string at separator string : `"Max & Moritz & Hexe".split(" & ")` --> ["Max", "Moritz", "Hexe"]
 * `strip()`: removes whitespace and control characters (e.g. `\n` from string)
+
+**[⬆ back to top](#table-of-contents)**
+___
 
 ## Conversions
 
@@ -32,6 +45,9 @@
   * `f = float("5") + int("6.5")` - does not work !
   * `f = float("5") + int(float("6.5"))` - works !
   * floats can be converted to ints and vice versa, but string parsing is rather tedious!
+
+**[⬆ back to top](#table-of-contents)**
+___
 
 ## Operators
 
@@ -68,6 +84,9 @@
 
 * `not`: Equivalent to `!` Operators in oth languages - negates boolean Expressions
 ``
+
+**[⬆ back to top](#table-of-contents)**
+___
 
 ## Control structures
 
@@ -142,7 +161,7 @@ print("outside if")
   ```
 
 
-## Loops
+### Loops
 
 * __while__: as long as a condition is satisfied
   
@@ -204,6 +223,9 @@ print("outside if")
     print(i)
 ```
 
+**[⬆ back to top](#table-of-contents)**
+___
+
 ## Functions
 
 ``` Python
@@ -221,6 +243,9 @@ print("outside if")
     # 25
     # Stop
 ```
+
+**[⬆ back to top](#table-of-contents)**
+___
 
 ## File Handling
 
@@ -241,3 +266,6 @@ print("outside if")
     print(file) # throws error: file is already closed
 
   ```
+
+**[⬆ back to top](#table-of-contents)**
+___

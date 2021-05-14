@@ -128,3 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .vscode/settings.json
+code/01_Basics/datei.csv

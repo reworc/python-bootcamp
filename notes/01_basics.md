@@ -14,6 +14,7 @@
 * `pop()` removes last element from the list (and returns the last element itself)
 * `join()` insert strings as separators in lists: `(" & ").join(["Max", "Moritz", "Hexe"])` --> `Max & Moritz & Hexe`
 * `split() `: split string at separator string : `"Max & Moritz & Hexe".split(" & ")` --> ["Max", "Moritz", "Hexe"]
+* `strip()`: removes whitespace and control characters (e.g. `\n` from string)
 
 ## Conversions
 
@@ -129,6 +130,24 @@ print("outside if")
     print("invalid")
 ```
 
+* __Ternary operator:__
+  
+  ``` python
+    # Syntax :
+    # [on_true] if [expression] else [on_false]
+
+    def maximum(a,b):
+      return b if a < b else a 
+
+    # equivalent to:
+    def maximum_if_else(a, b):
+      if a < b:
+        return b
+      else:
+        return a
+  ```
+
+
 ## Loops
 
 * __while__: as long as a condition is satisfied
@@ -160,6 +179,17 @@ print("outside if")
     print(elem)      # prints 1, 5, 6      
       
   print("elem after loop: " + str(elem))      # prints "elem after loop: 6"
+```
+
+ * __CAUTION__ : foreach **copies** - within the loop you can not modify the element itself - you have to assign it via list index:
+
+```Python
+  i = 0
+  for elem in list:    
+    if elem == "value to be changed":
+      elem = "new value"                    # only the copy is modified, the original is still in list
+      list[i] = "new value"                 # change value at index (or use for in range(0, len(list)) - loop)
+    i += 1
 ```
 
 * Output only uneven numbers:
@@ -198,3 +228,22 @@ print("outside if")
     # Stop
 ```
 
+## File Handling
+
+* `file = open("example.txt", "r")`: opens file example.txt for read access
+* `file = open("example.txt", "w")`: opens file example.txt for write access (creates if not existing)
+* `file = open("example.txt", "a")` appends data to opened file
+* `file.close()`: close file after it is used
+* __with__ Operator (cf. `using` in __C#__):
+  * closes/releases resources when they get out of scope
+  
+  ``` Python
+
+    with open("schreiben.txt", "r") as file:
+      for line in file:
+          str = line.strip()
+          print(str)
+
+    print(file) # throws error: file is already closed
+
+  ```

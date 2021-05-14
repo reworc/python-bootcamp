@@ -15,6 +15,7 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
     - [Operators](material/docs/05_Vergleichsoperatoren.pdf)
     - [Lists](material/docs/06_Operatoren_Listen.pdf)
     - [Loops](material/docs/07_Schleifen.pdf)
+    - [Functions](material/docs/08_Funktionen_Methoden.pdf)
 - __notes__: notes about programming with python
   - [Prerequisites](notes/00_prerequisites.md)
   - [Basics](notes/01_basics.md)

@@ -55,7 +55,8 @@ ___
 * constructor: `__init__`
 * toString: `__str__`
 * string representation of object in console (not via str()) : `__repr__`
-* overwrite `len()` for object: ``__len__`
+* overwrite `len()` for object: `__len__`
+* `__dict__`: returns all properties with values of a python object
 
 ``` Python
   class Phonebook:

@@ -13,6 +13,7 @@
 ## Base Data structures and Syntax
 
 * define variable: `a = 2+3`
+* x ^ y: `x ** y`
 * strings +  number:  
   `print("my age is: " + 22)`  
   throws an error - number needs to be converted first using `str()`:  

@@ -1,9 +1,9 @@
-# Python Bootcamp: Crawler Project
+# Python Bootcamp: Generators
 
 <!-- omit in toc -->
 ## Table of Contents
 
-1. [Basics](#basics)
+1. [Generator concept](#generator-concept)
 
 ## Generator concept
 
@@ -86,3 +86,6 @@
       for art in page: 
         ...                                               # also ignores inner generator 
   ```
+
+**[⬆ back to top](#table-of-contents)**
+___

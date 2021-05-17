@@ -27,12 +27,16 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
     - [Tuple](material/docs/11_Tupel.pdf)
     - [OOP](material/docs/12_OOP.pdf)
     - [Modules](material/docs/14_Modules.pdf)
+    - [Exceptions](material/docs/15_Exceptions.pdf)
 - __notes__: notes about programming with python
   - [Prerequisites](notes/00_prerequisites.md)
   - [Basics](notes/01_basics.md)
   - [Lists](notes/02_lists.md)
   - [OOP](notes/03_oop.md)
   - [Modules](notes/04_modules.md)
+  - [Example project: Web crawling](notes/05_crawler_project.md)
+  - [Generators](notes/06_generators.md)
+  - [Exceptions](notes/07_exceptions.md)
 
 **[⬆ back to top](#table-of-contents)**
 ___

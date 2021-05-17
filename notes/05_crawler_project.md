@@ -9,7 +9,7 @@
 
 ## Basics
 
-* Required Modules: 
+* Required Modules:
   * [requests-Module](https://docs.python-requests.org/en/master/)
   * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)  
 * usually need to be installed manually, but is included with anaconda
@@ -101,10 +101,12 @@ ___
 
 * [List of included python modules](https://docs.python.org/3/py-modindex.html)
 * online-documentation of available python modules for current python version
-
-
 * find currently used python version:
+  
   ```Python
   import sys
   print(sys.version)
-```
+  ```
+  
+**[⬆ back to top](#table-of-contents)**
+___

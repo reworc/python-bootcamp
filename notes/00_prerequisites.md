@@ -15,6 +15,16 @@ python installation: use ___Anaconda__ package
 
 Anaconda navigator: Launcher for all tools related to Python
 
+Anaconda update via console (run anaconda bash as administrator):
+(cf. [StackOverflow](https://stackoverflow.com/questions/55144561/anaconda-navigator-does-not-update-packages))
+
+``` Bash
+    conda update conda                      # updates anaconda
+    conda update anaconda-navigator         # updates navigator
+    conda update navigator-updater          # not necessary
+    conda update --all -y                   # updates all other packages
+```
+
 **[⬆ back to top](#table-of-contents)**
 ___
 

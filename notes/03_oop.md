@@ -9,6 +9,7 @@
 4. [Type checking](#type-checking)
 5. [Static variables](#static-variables)
 6. [Naming Conventions](#naming-conventions)
+7. [Type Annotations](#type-annotations)
 
 ## Basics
 
@@ -38,7 +39,7 @@
 
   ```
 
-* private methods: everything that start with `__` is treated as private. 
+* private methods: everything that start with `__` is treated as private.
 * private by convention, but not enforced by the language: variables that are starting with a single `_` should not be changed, but in fact this si not enforced by the language, just a developer hint !
 * even floats are objects:
 
@@ -55,7 +56,8 @@ ___
 * constructor: `__init__`
 * toString: `__str__`
 * string representation of object in console (not via str()) : `__repr__`
-* overwrite `len()` for object: ``__len__`
+* overwrite `len()` for object: `__len__`
+* `__dict__`: returns all properties with values of a python object
 
 ``` Python
   class Phonebook:
@@ -125,7 +127,6 @@ ___
 **[⬆ back to top](#table-of-contents)**
 ___
 
-
 ## Static variables
 
 ``` Python
@@ -157,6 +158,9 @@ ___
     print(c3.price)       # mäh
 ```
 
+**[⬆ back to top](#table-of-contents)**
+___
+
 ## Naming Conventions
 
 * PascalCase(`AVeryLongName`)
@@ -169,6 +173,52 @@ ___
 | Variable Name | sneak_case | `a_very_long_variable_name = []`     |
 | Method Name   | sneak_case | `def a_very_long_method_name(self):` |
 
+**[⬆ back to top](#table-of-contents)**
+___
+
+## Type Annotations
+
+``` Python
+  from typing import Optional, Iterator                         # typings package
+
+  class Example:
+
+    # You can optionally declare instance variables in the class body
+    attr: int
+    # This is an instance variable with a default value
+    charge_percent: int = 100
+
+    # The "__init__" method doesn't return anything, so it gets return
+    # type "None" just like any other method that doesn't return anything
+    def __init__(self) -> None:
+      ...
+
+    # Decorator: static method
+    # returns an array of Crawled articles, argument type is string
+    @staticmethod                                                 
+    def read_from_file(file_name: str) -> list[CrawledArticle]:   
+        result = []
+        ...
+        return result
+
+    # 'void' return type: None
+    def write_to_file(self, file_name: str, num_articles: int) -> None:
+
+    # generators return iterators
+    def __fetch(doc: BeautifulSoup, page_url: str) -> Iterator[CrawledArticle]:
+
+    # a method that may return None returns an Optional
+    def __get_next_page_url(page_url: str, doc: BeautifulSoup) -> Optional[str]:
+        ...
+        if len(elem) == 1:
+            return "..."
+        else:
+            return None
+
+
+```
+
+* Reference: [Python3 Type Annotations Cheat Sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
 
 **[⬆ back to top](#table-of-contents)**
 ___

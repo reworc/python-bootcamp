@@ -69,6 +69,10 @@ ___
     xs2 = [x / 10 for x in range(0,100)]    # [0.0, 0.1, .., 9.9]
     ys3 = [v * v for v in xs2]              # [0.0, 0.01, .., 98.01]
 
+    var pages = [ [1,2], [3,4,5] ]          # nested list of articles in list of pages
+    var flat_elements = [ art for page in pages for art in page ]   # [1,2,3,4,5]
+    
+
 ```
 
 **[⬆ back to top](#table-of-contents)**

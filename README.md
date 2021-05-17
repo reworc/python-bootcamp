@@ -37,6 +37,7 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
   - [Example project: Web crawling](notes/05_crawler_project.md)
   - [Generators](notes/06_generators.md)
   - [Exceptions](notes/07_exceptions.md)
+  - [Data Structures](notes/08_data_structures.md)
 
 **[⬆ back to top](#table-of-contents)**
 ___

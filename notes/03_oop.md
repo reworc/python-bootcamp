@@ -120,6 +120,7 @@ ___
 * `type(obj)` returns exact type, e.g:  
  `type(w_student)` returns `WorkingStudent`  
  `type(student)` returns `Student`
+* `type(obj)` returns a type object: e.g. `<class Object>`, when trying to acces name of the object, use : `type(obj).__name__`
 * `isInstance(obj, type)` checks if obj is of specified type or any deriving type:
   `isinstance(w_student, WorkingStudent):`  returns `true`  
   `isinstance(w_student, Student):`  returns `true`

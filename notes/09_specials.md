@@ -12,6 +12,7 @@
 7. [Lambda Functions](#lambda-functions)
 8. [Sorting](#sorting)
 9. [Format Strings](#format-strings)
+10. [DefaultDict](#defaultdict)
 
 ## Optional Parameters
 
@@ -288,6 +289,94 @@ ___
 ___
 
 ## Format Strings
+
+* can use placeholders in strings and use `string.format()` (e.g. for translations):
+
+```Python
+
+  trans = {
+    "de": "Ich habe {0} Hunde",
+    "eng": "I got {0} dogs"
+  }
+
+  for key, value in trans.items():
+      print(value.format(n))
+
+  # Ich habe 5 Hunde
+  # I got 5 dogs
+```
+
+* naming and formatting of values:
+
+``` Python
+  # Pi hat den Wert: 3.142
+  print("Pi hat den Wert: {0:.3f}".format(math.pi))
+  print("Pi hat den Wert: {pi:.3f}".format(pi=math.pi))
+  print(f"Pi hat den Wert: {math.pi:.3f}")
+  
+  # Pi hat den Wert: 3.142
+  print("{0} hat den Wert: {pi:.3f}".format("Pi", pi=math.pi))
+  
+  # Pi hat den Wert: 3.142!!!
+  print("{0} hat den Wert: {pi:.3f}{1}".format("Pi", "!!!", pi=math.pi))
+```
+
+**[⬆ back to top](#table-of-contents)**
+___
+
+## DefaultDict
+
+* normal dictionaries throw an error if you try to access a non-exisiting key
+* `defaultdict` allows to specify a generator function to create a default value when accessing a non-exisiting key
+
+``` Python
+  from collections import defaultdict
+
+  def generate():                               # generator function
+      print("generate() wurde aufgerufen!")
+      return 0                                  # value to be set for non-exisiting (new) keys
+
+  d = defaultdict(generate)                     # provide generator function to constructor
+
+  normal_dict = {}
+
+  try:
+      print(normal_dict["existiert_nicht"])     
+  except Exception as e:
+      print(f"normal dictionaries throw an {type(e).__name__} if key does not exist..")
+
+  d["existiert_nicht"] = d["exisitiert_nicht"] + 5
+      
+  print(d["existiert_nicht"])
+  print(d)
+
+  """ 
+  Output:
+  normal dictionaries throw an KeyError if key does not exist..
+  generate() wurde aufgerufen!
+  5
+  defaultdict(<function generate at 0x000002C3176B4DC0>, {'existiert_nicht': 5})
+  """
+```
+
+* Example for counting:
+
+``` Python
+  p = defaultdict(int)                  # int() generates the default value 0
+  words = ["Hallo", "Hallo", "Welt"]
+
+  for word in words:
+      p[word] += 1
+
+  print(p)
+  # defaultdict(<class 'int'>, {'Hallo': 2, 'Welt': 1})
+
+  # get max items: 
+
+  # need to retrieve the key, value tuples and sort in reverse order by the value
+  sorted_d = sorted(p.items(), key= lambda elem: -elem[1])
+  print(sorted_d[0])                      # ('Hallo', 2)
+```
 
 **[⬆ back to top](#table-of-contents)**
 ___

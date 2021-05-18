@@ -31,6 +31,8 @@ def mars():
 
 * renaming: `import mathplotlib.pyplot as plt`
 
+* print all variables and function of an imported module: `print(dir(mymodule))`
+
 * __remark regarding Jupyter Notebooks__: imports are only executed once, if script changes, kernel needs to be restarted to reimport module
 
 **[⬆ back to top](#table-of-contents)**
@@ -96,10 +98,9 @@ ___
 
 * [List of included python modules](https://docs.python.org/3/py-modindex.html)
 * online-documentation of available python modules for current python version
-
-
 * find currently used python version:
+  
   ```Python
   import sys
   print(sys.version)
-```
+  ```

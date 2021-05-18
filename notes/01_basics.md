@@ -4,22 +4,60 @@
 ## Table of Contents
 
 1. [Base Data structures and Syntax](#base-data-structures-and-syntax)
-2. [Conversions](#conversions)
-3. [Operators](#operators)
-4. [Control structures](#control-structures)
-5. [Functions](#functions)
-6. [File Handling](#file-handling)
+2. [Strings](#strings)
+3. [Conversions](#conversions)
+4. [Operators](#operators)
+5. [Control structures](#control-structures)
+6. [Functions](#functions)
+7. [File Handling](#file-handling)
 
 ## Base Data structures and Syntax
 
 * define variable: `a = 2+3`
 * x ^ y: `x ** y`
-* strings +  number:  
+* Comments:  
+  `#` for single line comments
+  `"""` for comment blocks
+* strings + number:  
   `print("my age is: " + 22)`  
   throws an error - number needs to be converted first using `str()`:  
   `print("my age is: " + str(22))`
+
+**[⬆ back to top](#table-of-contents)**
+___
+
+## Strings
+
 * `split() `: split string at separator string : `"Max & Moritz & Hexe".split(" & ")` --> ["Max", "Moritz", "Hexe"]
-* `strip()`: removes whitespace and control characters (e.g. `\n` from string)
+* `strip()`: removes whitespace and control characters (e.g. `\n` from string)  
+  it is also possible to specify additional characters that should be removed from start and end:
+
+  ``` Python
+
+    string ="____?Hallo._"
+
+    print(string.strip("_ .?"))         # Hallo
+                                        # removes "_", " ", "." and "?" from start/beginning
+    print(string.lstrip("_ .?"))        # Hallo._ 
+                                        # strip only on left side
+    print(string.rstrip("_ .?"))        # ____?Hallo
+                                        # strip only on right side
+  ```
+
+* `upper()`: converts string to uppercase
+* `lower()`: converts string to lowercase
+* `startswith()`, `endswith()`: starts / ends string with the given string ?
+* contains: either use regular expressions or `"word" in string`:
+  
+  ``` Python 
+    sentence = "Ist das Wetter heute gut ?"
+    print("das" in sentence)                  # True
+    print("dat" in sentence)                  # False
+  ```
+* `find(search)`: find search in string  
+  returns -1 if search was not found
+* `replace(src,dst)` replace dst in string by src
+* 
 
 **[⬆ back to top](#table-of-contents)**
 ___
@@ -30,6 +68,7 @@ ___
 * `int()`: converts to integer
 * `float`: converts to float
 * `bool()`: converts to bool
+* `complex()`: converts to a complex number
   
   ``` Python
     result = bool(0)        # False
@@ -161,7 +200,6 @@ print("outside if")
         return a
   ```
 
-
 ### Loops
 
 * __while__: as long as a condition is satisfied
@@ -195,7 +233,7 @@ print("outside if")
   print("elem after loop: " + str(elem))      # prints "elem after loop: 6"
 ```
 
- * __CAUTION__ : foreach **copies** - within the loop you can not modify the element itself - you have to assign it via list index:
+* __CAUTION__ : foreach **copies** - within the loop you can not modify the element itself - you have to assign it via list index:
 
 ```Python
   i = 0

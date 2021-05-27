@@ -28,14 +28,14 @@ Anaconda update via console (run anaconda bash as administrator):
 **[⬆ back to top](#table-of-contents)**
 ___
 
-## Jupyter configuration 
+## Jupyter configuration
 
 * by default, jupyter notebooks start at the user directory (without the chance to navigate up !)
 * to change this, generate a custom jupyter config:
 
     1. open command prompt
-    2. run `jupyter notebook --generate-config.`
-    3. this genartes a config file at `C:\Users\username\.jupyter\jupyter_notebook_config.py`
+    2. run `jupyter notebook --generate-config`
+    3. this generates a config file at `C:\Users\username\.jupyter\jupyter_notebook_config.py`
     4. look for the line: `#c.NotebookApp.notebook_dir = ''`
     5. set the new path (use forward slashes ! e.g. `D:/Programming/python/`) in this setting (replace the `#` at the beginning)
 

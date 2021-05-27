@@ -28,7 +28,7 @@ ___
 
 ## Strings
 
-* `split() `: split string at separator string : `"Max & Moritz & Hexe".split(" & ")` --> ["Max", "Moritz", "Hexe"]
+* `split()`: split string at separator string : `"Max & Moritz & Hexe".split(" & ")` --> ["Max", "Moritz", "Hexe"]
 * `strip()`: removes whitespace and control characters (e.g. `\n` from string)  
   it is also possible to specify additional characters that should be removed from start and end:
 
@@ -49,15 +49,15 @@ ___
 * `startswith()`, `endswith()`: starts / ends string with the given string ?
 * contains: either use regular expressions or `"word" in string`:
   
-  ``` Python 
+  ``` Python
     sentence = "Ist das Wetter heute gut ?"
     print("das" in sentence)                  # True
     print("dat" in sentence)                  # False
   ```
+
 * `find(search)`: find search in string  
   returns -1 if search was not found
 * `replace(src,dst)` replace dst in string by src
-* 
 
 **[⬆ back to top](#table-of-contents)**
 ___

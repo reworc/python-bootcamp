@@ -380,3 +380,31 @@ ___
 
 **[⬆ back to top](#table-of-contents)**
 ___
+
+## User Input
+
+``` Python
+
+    age1 = input("Enter age of Person 1:")
+    age2 = input("Enter age of Person 2:")
+
+    print(f'Gemeinsames Alter: {int(age1) + int(age2)}')
+```
+
+**[⬆ back to top](#table-of-contents)**
+___
+
+## Programm-Parameter 
+
+* `sys.argv` contains the path for the running script at position 0, afterwards the parameters provided upon start
+
+
+``` Python
+
+    import sys
+    if len(sys.argv) >= 2:
+      ...
+ ```
+
+**[⬆ back to top](#table-of-contents)**
+___

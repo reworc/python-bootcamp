@@ -13,6 +13,7 @@
 8. [Sorting](#sorting)
 9. [Format Strings](#format-strings)
 10. [DefaultDict](#defaultdict)
+11. [CSV-Basics](#csv-basics)
 
 ## Optional Parameters
 
@@ -377,6 +378,35 @@ ___
   sorted_d = sorted(p.items(), key= lambda elem: -elem[1])
   print(sorted_d[0])                      # ('Hallo', 2)
 ```
+
+**[⬆ back to top](#table-of-contents)**
+___
+
+## CSV-Basics
+
+* [Documentation](https://docs.python.org/3/library/csv.html)
+
+``` python
+  result = []
+
+   with open('students.csv', 'r', newline='') as f:       # open file for reading ('r')
+        reader = csv.reader(f, delimiter=';')             # set the delimiter
+        
+        for row in reader:                                # not so cool: list-slicing doesn't work !
+            result.append(row)                            # result = array of lists with column items
+```
+
+```python
+
+  with open('students.csv', 'w', newline='', encoding="utf-8") as f:  # open for writing, encoding utf-8 for special-character support
+        writer = csv.writer(f, delimiter=';')                         # set the delimiter
+                   
+        for item in result:
+            writer.writerow(item)                                     # writes list items in the columns
+
+```
+
+* `w` rewrites the complete file, `a` appends content
 
 **[⬆ back to top](#table-of-contents)**
 ___

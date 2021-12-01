@@ -44,6 +44,7 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
   - [Exceptions](notes/07_exceptions.md)
   - [Data Structures](notes/08_data_structures.md)
   - [Specials](notes/09_specials.md)
+  - [Jupyter Notebooks](notes/10_jupyter.md)
 
 **[⬆ back to top](#table-of-contents)**
 ___

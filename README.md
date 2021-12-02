@@ -33,6 +33,7 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
     - [Date and Time](material/docs/17_Datumsfunktionen.pdf)
     - [Strings](material/docs/18_Strings.pdf)
     - [Format Strings](material/docs/19_Strings_formatieren.pdf)
+    - [DataScience Workflow](material/docs/20_DataScience_Workflow.pdf)
 - __notes__: notes about programming with python
   - [Prerequisites](notes/00_prerequisites.md)
   - [Basics](notes/01_basics.md)
@@ -45,6 +46,7 @@ Based on Python Learning Course on udemy: [Python Bootcamp: Vom Anfänger zum Pr
   - [Data Structures](notes/08_data_structures.md)
   - [Specials](notes/09_specials.md)
   - [Jupyter Notebooks](notes/10_jupyter.md)
+  - [Python Data Science Stack](notes/11_data_science_stack.md)
 
 **[⬆ back to top](#table-of-contents)**
 ___

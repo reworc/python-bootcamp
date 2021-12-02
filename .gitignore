@@ -133,3 +133,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 code/data/names.csv
+code/10_data_science_stack/data/names.csv

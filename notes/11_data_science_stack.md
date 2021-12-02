@@ -7,7 +7,9 @@
 2. [Numpy Basics](#numpy-basics)
 3. [Numpy Filtering](#numpy-filtering)
 4. [Numpy - multidimensional arrays](#numpy-multidimensional-arrays)
-5. [References](#references)
+5. [Pandas - Basics](#pandas-basics)
+6. [Pandas - Excel and Plotting](#pandas-excel-and-plotting)
+7. [References](#references)
 
 ## Tools Overview
 
@@ -102,15 +104,68 @@ ___
 
 ```
 
+**[⬆ back to top](#table-of-contents)**
+___
+
+## Pandas - Basics
+
+``` python
+   df = pd.read_csv("data.csv")         # read csv into data frame
+
+   df["Name"]                           # return all values on column "Name"
+   first = df.iloc[0]                   # returns first row (as Pandas.Series)
+
+   first["Name"]                        # returns value of column Name in first row 
+
+   df.iloc[-10:]                        # list slicing: returns the last 10 elements
+
+   for row in df.iterrows():            # iterates through rows, 
+                                        # row is tuple of index and row content
+       pos, d = row                     # unpacking tuple into pos and d
+   # for pos, d in df.iterrows():       # alternative notation: unpack directly in for loop
+
+   filtered = df[df["Year"] < 1990]     # filter data frame by Year > 1990 (returns copy)
+
+   # filter all null, NaN values in column "Missing"
+   deaths = df[df["Missing"].isnull() == False]
+
+    # combine filters syntax
+   combined = df[(df["col1"] > x) & (df["col2"] == False)] 
+
+    # sort data frame by column values descending
+    df.sort_values("col", ascending=False)
+```
+
+* __Remarks__:
+  * Pandas assumes, that the first row in the csv contains the column names
+  * by default, the delimiter for csv is `,` - this can be changed by specifying the parameter delimiter in `read_csv` function, e.g.: `pd.read_csv("data.csv", delimiter=';')`
+  * instead of combining filters, they can also applied subsequently (in case of and)
+
+**[⬆ back to top](#table-of-contents)**
+___
+
+## Pandas - Excel and Plotting
+
+``` python
+    %matplotlib inline
+    import matplotlib.pyplot as plt
+
+    excel_df = pd.read_excel("data/data.xlsx")          # load excel sheet
+
+    year = excel_df["Year"]
+    sales = excel_df["Sales"]
+
+    plt.plot(year, sales)
+    plt.show()
+```
 
 **[⬆ back to top](#table-of-contents)**
 ___
 
 ## References
 
-[Wikibook: LaTeX Math](https://en.wikibooks.org/wiki/LaTeX/Mathematics)  
-[List of LaTeX math symbols](http://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)  
-[IPyWidgets Documentation - List of Widgets](https://ipywidgets.readthedocs.io/en/stable/examples/Widget%20List.html#Complete-list)
+[Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/index.html)  
+[Pandas - Read Excel](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)  
 
 **[⬆ back to top](#table-of-contents)**
 ___

@@ -9,7 +9,8 @@
 4. [Numpy - multidimensional arrays](#numpy-multidimensional-arrays)
 5. [Pandas - Basics](#pandas-basics)
 6. [Pandas - Excel and Plotting](#pandas-excel-and-plotting)
-7. [References](#references)
+7. [Matplotlib - Basics](#matplotlib-basics)
+8. [References](#references)
 
 ## Tools Overview
 
@@ -162,10 +163,123 @@ ___
 **[⬆ back to top](#table-of-contents)**
 ___
 
+## Matplotlib - Basics
+
+* different backends for matplotlib
+  * `inline` (graph inside notebook)
+  * `notebook` (interactive graph with panning etc.)
+  * `tk` (external window)
+* __Remark__: switching backends requires kernel restart
+
+``` python
+    %matplotlib inline                                  # inline
+    import matplotlib.pyplot as plt
+
+    plt.plot(year, sales, 
+        color="ff00ff",                                 # define line color
+        linestyle="dashed",                             # dash lines
+        marker = "o",                                   # mark data points
+        label= "sales"                                  # label for legend
+    )
+    plt.legend()                                        # display legend
+    plt.show()
+```
+
+* __Remarks__: if displaying plain pandas dataframe columns, the labels are automatically generated from column names
+
+### Pie chart
+
+```python
+
+    plt.pie([1,2,3])                                    
+    plt.show()
+```
+
+![Pie Chart](img/pie_chart.png "Pie Chart")
+
+### Bar CHart
+
+```python
+
+    plt.bar([1,2,3], [3, 7, 4.5])
+    plt.show()
+```
+
+![Bar Chart](img/bar_chart.png "Bar Chart")
+
+```python
+
+    plt.bar([1,3,5], [3, 7, 4.5])
+    plt.bar([2,4,6], [2, 1, 5])
+    plt.show()
+```
+
+![Bar Chart with 2 bars](img/bar_chart2.png "Bar Chart with 2 bars")
+
+```python
+
+    plt.bar([1,2,3], [3.5, 7, 5.5])
+    plt.bar([1,2,3], [3, 6, 4.5])
+    plt.show()
+```
+
+![Bar Chart with stacked bars](img/bar_chart3.png "Bar Chart with stacked bars")
+
+### Scatter Plot
+
+```python
+
+    plt.scatter([1,2,3], [3, 7, 4.5])
+    plt.show()
+```
+
+![Scatter Plot](img/scatter_plot.png "Scatter Plot")
+
+```python
+
+    plt.scatter([1,2,3], [3, 7, 4.5])
+    plt.scatter([1.7,2.4,2.8], [3.5, 3.75, 5.75])
+    plt.show()
+```
+
+![Scatter Plot with 2 data sets](img/scatter_plot2.png "Scatter Plot with 2 data sets")
+
+### Line Plot
+
+```python
+
+    plt.plot([1,2,3], [3, 7, 4.5], marker = "o")
+    plt.plot([1.7,2.4,2.8], [3.5, 3.75, 5.75], linestyle="dashed", marker = "o")
+    plt.show()
+```
+
+![Line Plot with two lines](img/line_plot.png "Line Plot")
+
+### Combined
+
+```python
+
+    plt.plot([1,4], [2, 4], color='C1', linestyle="dotted")
+    plt.scatter(
+        [1.1, 1.3, 1.4, 1.7, 1.9, 2.3, 2.4, 2.5, 3, 3.1, 3.2, 3.3, 3.7, 3.9, 4], 
+        [2.1, 2.2, 2.4, 2.3, 2.8, 3.1, 3.4, 3.2, 3.3, 3.5, 3.6, 3.3, 3.7, 3.9, 4.1],
+        c='None', edgecolors='C0'
+    )
+    plt.show()
+```
+
+![Combined Scatter and Line Plot](img/combined_plot.png "Combined Scatter and Line Plot")
+
+**[⬆ back to top](#table-of-contents)**
+___
+
 ## References
 
 [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/index.html)  
 [Pandas - Read Excel](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)  
+[matplotlib Documentation](https://matplotlib.org/stable/index.html)  
+[matplotlib - API Reference](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html)
+
 
 **[⬆ back to top](#table-of-contents)**
 ___
